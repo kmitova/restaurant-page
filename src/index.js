@@ -16,7 +16,7 @@ const content = document.getElementById('content')
 console.log('now in the index.js file')
 const topSection = document.createElement('div')
 const heading = document.createElement('h1')
-heading.textContent = 'Restaurant Name'
+heading.textContent = "Kati's Bakery and Café";
 topSection.appendChild(heading)
 content.appendChild(topSection)
 const listItems = document.createElement('ul')
