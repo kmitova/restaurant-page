@@ -5,3 +5,11 @@
 li {
   cursor: pointer;
 }
+
+.show {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.hide {
+  display: none;
+}

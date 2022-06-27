@@ -1,6 +1,6 @@
 // import _ from 'lodash';
 import "./style.css";
-
+import { renderHome } from "./home";
 // function component() {
 //   const element = document.createElement("div");
 
@@ -12,6 +12,11 @@ import "./style.css";
 // }
 
 // document.body.appendChild(component());
+window.addEventListener("load", (event) => {
+  renderHome()
+});
+
+
 const content = document.getElementById('content')
 console.log('now in the index.js file')
 const topSection = document.createElement('div')
@@ -30,4 +35,16 @@ listItems.appendChild(menu);
 const contact = document.createElement("li");
 contact.textContent = "Contact";
 listItems.appendChild(contact);
+let homeClicked = false
+
+home.addEventListener('click', ()=> {
+  if (!homeClicked) {
+    homeClicked=true
+    let result = renderHome()
+  // append to content element
+  content.append(result)
+  console.log(result)
+  result.classList.add('show')
+  }
+})
 
