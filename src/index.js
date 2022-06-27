@@ -1,19 +1,18 @@
 // import _ from 'lodash';
 import "./style.css";
 import { renderHome } from "./home";
-// function component() {
-//   const element = document.createElement("div");
+import { renderMenu } from "./menu";
+import { renderContact } from "./contact"
 
-  
-//   element.innerHTML = _.join(["Hello", "webpack"], " ");
-//   element.classList.add("hello");
-
-//   return element;
-// }
-
-// document.body.appendChild(component());
-window.addEventListener("load", (event) => {
-  renderHome()
+window.addEventListener("load", () => {
+  homeResult = renderHome()
+  content.append(homeResult);
+  // console.log(result)
+  homeResult.classList.remove("hide");
+  menuResult.classList.add("hide");
+  contactResult.classList.add("hide");
+  menuClicked = false;
+  contactClicked = false;
 });
 
 
@@ -36,15 +35,52 @@ const contact = document.createElement("li");
 contact.textContent = "Contact";
 listItems.appendChild(contact);
 let homeClicked = false
-
+let menuClicked = false
+let contactClicked = false
+let homeResult = document.createElement('div')
+let menuResult = document.createElement('div')
+let contactResult = document.createElement('div')
+content.append(homeResult, menuResult, contactResult)
+menuResult.classList.add("hide");
+contactResult.classList.add("hide");
+homeResult.classList.add('hide')
 home.addEventListener('click', ()=> {
   if (!homeClicked) {
     homeClicked=true
-    let result = renderHome()
+    homeResult = renderHome()
   // append to content element
-  content.append(result)
-  console.log(result)
-  result.classList.add('show')
+  content.append(homeResult)
+  // console.log(result)
+  homeResult.classList.remove('hide')
+  menuResult.classList.add('hide')
+  contactResult.classList.add('hide')
+  menuClicked = false
+  contactClicked = false
   }
 })
 
+menu.addEventListener('click', () => {
+  if (!menuClicked) {
+    menuClicked = true
+    menuResult = renderMenu()
+    menuResult.classList.remove('hide')
+    content.appendChild(menuResult)
+    homeResult.classList.add('hide')
+    contactResult.classList.add("hide");
+    homeClicked = false
+    contactClicked = false
+  }
+})
+
+contact.addEventListener("click", () => {
+  if (!contactClicked) {
+    contactClicked = true;
+    contactResult = renderContact();
+    contactResult.classList.remove("hide");
+    content.appendChild(contactResult);
+    homeResult.classList.add("hide");
+    menuResult.classList.add("hide");
+    homeClicked = false;
+    menuClicked = false;
+  }
+});
