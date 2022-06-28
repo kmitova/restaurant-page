@@ -48,7 +48,32 @@ function renderMenu() {
   food.textContent = "Food:";
   menuContent.appendChild(food); 
 
-  // add food content
+  const foodItem = document.createElement('div')
+  menuContent.appendChild(foodItem)
+  const foodTitle = document.createElement('h4')
+  foodTitle.textContent = 'Almond Croissant'
+  foodItem.appendChild(foodTitle)
+  const foodPrice = document.createElement('p')
+  foodPrice.textContent = '3.3'
+  foodItem.appendChild(foodPrice)
+
+  const foodItem2 = document.createElement("div");
+  menuContent.appendChild(foodItem2);
+  const foodTitle2 = document.createElement("h4");
+  foodTitle2.textContent = "Pesto and Mozzarella Sandwich";
+  foodItem2.appendChild(foodTitle2);
+  const foodPrice2 = document.createElement("p");
+  foodPrice2.textContent = "4.2";
+  foodItem2.appendChild(foodPrice2);
+
+  const foodItem3 = document.createElement("div");
+  menuContent.appendChild(foodItem3);
+  const foodTitle3 = document.createElement("h4");
+  foodTitle3.textContent = "Pain au Raisin";
+  foodItem3.appendChild(foodTitle3);
+  const foodPrice3 = document.createElement("p");
+  foodPrice3.textContent = "3.6";
+  foodItem3.appendChild(foodPrice3);
 
   return menuContent
 }
