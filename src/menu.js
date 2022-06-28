@@ -1,21 +1,21 @@
 function renderMenu() {
-  const menuContent = document.createElement('div')
-  const menuTitle = document.createElement('h2')
-  menuTitle.textContent = 'Our Menu:'
-  menuContent.appendChild(menuTitle)
+  const menuContent = document.createElement("div");
+  const menuTitle = document.createElement("h2");
+  menuTitle.textContent = "Our Menu";
+  menuContent.appendChild(menuTitle);
 
-  const beverages = document.createElement('h3')
-  beverages.textContent = 'Coffee:'
-  menuContent.appendChild(beverages)
+  const beverages = document.createElement("h3");
+  beverages.textContent = "Coffee:";
+  menuContent.appendChild(beverages);
 
-  const drinkItem = document.createElement('div')
-  menuContent.appendChild(drinkItem)
-  const drinkTitle = document.createElement('h4')
-  drinkTitle.textContent = 'Espresso'
-  drinkItem.appendChild(drinkTitle)
-  const drinkPrice = document.createElement('p')
-  drinkPrice.textContent = '3.5'
-  drinkItem.appendChild(drinkPrice)
+  const drinkItem = document.createElement("div");
+  menuContent.appendChild(drinkItem);
+  const drinkTitle = document.createElement("h4");
+  drinkTitle.textContent = "Espresso";
+  drinkItem.appendChild(drinkTitle);
+  const drinkPrice = document.createElement("p");
+  drinkPrice.textContent = "3.5";
+  drinkItem.appendChild(drinkPrice);
 
   const drinkItem2 = document.createElement("div");
   menuContent.appendChild(drinkItem2);
@@ -46,16 +46,16 @@ function renderMenu() {
 
   const food = document.createElement("h3");
   food.textContent = "Food:";
-  menuContent.appendChild(food); 
+  menuContent.appendChild(food);
 
-  const foodItem = document.createElement('div')
-  menuContent.appendChild(foodItem)
-  const foodTitle = document.createElement('h4')
-  foodTitle.textContent = 'Almond Croissant'
-  foodItem.appendChild(foodTitle)
-  const foodPrice = document.createElement('p')
-  foodPrice.textContent = '3.3'
-  foodItem.appendChild(foodPrice)
+  const foodItem = document.createElement("div");
+  menuContent.appendChild(foodItem);
+  const foodTitle = document.createElement("h4");
+  foodTitle.textContent = "Almond Croissant";
+  foodItem.appendChild(foodTitle);
+  const foodPrice = document.createElement("p");
+  foodPrice.textContent = "3.3";
+  foodItem.appendChild(foodPrice);
 
   const foodItem2 = document.createElement("div");
   menuContent.appendChild(foodItem2);
@@ -75,8 +75,8 @@ function renderMenu() {
   foodPrice3.textContent = "3.6";
   foodItem3.appendChild(foodPrice3);
 
-  menuContent.classList.add('container')
-  return menuContent
+  menuContent.classList.add("container");
+  return menuContent;
 }
 
-export { renderMenu }
+export { renderMenu };
