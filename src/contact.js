@@ -15,6 +15,7 @@ function renderContact() {
   email.textContent = 'customersupport@katiscafe.com'
 
   contactsDetails.append(phone, email)
+  contactContent.classList.add('container')
   return contactContent;
 }
 

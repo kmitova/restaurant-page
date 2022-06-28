@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Mulish', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hello {
@@ -11,11 +18,33 @@ li {
   list-style: none;
 }
 
+li:hover {
+  color: red;
+}
+
 ul {
   display: flex;
   gap: 10px;
+  justify-content: center;
+  margin: auto;
+  background-color: white;
+  padding: 1em;
+  border-radius: 40px;
+
 }
 
 .hide {
   display: none;
+}
+
+body {
+  background-color: beige;
+}
+
+.container {
+  background-color: white;
+  margin: 4em;
+  padding: 2em;
+  border-radius: 40px;
+  /* width: 50%; */
 }

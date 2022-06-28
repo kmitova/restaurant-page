@@ -75,6 +75,7 @@ function renderMenu() {
   foodPrice3.textContent = "3.6";
   foodItem3.appendChild(foodPrice3);
 
+  menuContent.classList.add('container')
   return menuContent
 }
 
