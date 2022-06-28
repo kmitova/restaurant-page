@@ -3,14 +3,11 @@
 body {
   font-family: 'Mulish', sans-serif;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.hello {
-  color: red;
+h1, h2, h3, h4 {
+  font-style: italic;
+  font-weight: bold;
 }
 
 li {
@@ -19,14 +16,17 @@ li {
 }
 
 li:hover {
-  color: red;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  
 }
 
 ul {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   justify-content: center;
-  margin: auto;
+  margin: 0 30%;
   background-color: white;
   padding: 1em;
   border-radius: 40px;
@@ -47,4 +47,30 @@ body {
   padding: 2em;
   border-radius: 40px;
   /* width: 50%; */
+}
+
+.description {
+  /* width: 50%; */
+  
+  margin: auto;
+}
+
+.img-container {
+  background-image: url('./coffee-shop.jpeg');
+  background-repeat: no-repeat;
+  /* width: 1fr; */
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+}
+img {
+  width: 300px;
+}
+
+.img-desc-container {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-self: center;
+  margin: 2em;
 }

@@ -1,4 +1,4 @@
-import Picture from './background.jpeg';
+import Picture from './coffee-shop.jpeg';
 
 function renderHome() {
   // image
@@ -10,9 +10,17 @@ function renderHome() {
   homeContent.appendChild(title)
   title.textContent = 'About Us'
   const description = document.createElement('div')
-  homeContent.appendChild(description)
+  // homeContent.appendChild(description)
+  description.classList.add('description')
   description.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet, ipsum sed tincidunt ullamcorper, justo quam imperdiet nibh, ac porta metus mauris nec orci. Sed faucibus accumsan ante, ut ultrices nisi. Donec suscipit malesuada consequat. Vivamus id vulputate nunc, in vestibulum ipsum. Curabitur eget malesuada mauris. Cras semper mollis urna, nec egestas purus sollicitudin ac. Curabitur sem lectus, dignissim sit amet purus non, congue gravida mauris. In nec purus mattis, facilisis orci non, iaculis quam. Nullam elementum nunc nec massa interdum vestibulum. Curabitur iaculis, libero ac fermentum blandit, dolor erat suscipit dolor, id iaculis ligula sapien vitae arcu. Ut mauris orci, faucibus a vehicula scelerisque, facilisis vel dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam orci eros, bibendum sit amet ex vel, ultricies ullamcorper mauris. Mauris sed sapien consectetur, iaculis nibh non, scelerisque lorem. Nullam eget feugiat urna. Nunc quis pellentesque enim.";
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas laoreet, ipsum sed tincidunt ullamcorper, justo quam imperdiet nibh, ac porta metus mauris nec orci. Sed faucibus accumsan ante, ut ultrices nisi. Donec suscipit malesuada consequat. Vivamus id vulputate nunc, in vestibulum ipsum. Curabitur eget malesuada mauris. Cras semper mollis urna, nec egestas purus sollicitudin ac. Curabitur sem lectus, dignissim sit amet purus non, congue gravida mauris. In nec purus mattis, facilisis orci non, iaculis quam. Nullam elementum nunc nec massa interdum vestibulum. ";
+  const imageContainer = document.createElement('div')
+  const imgDescContainer = document.createElement('div')
+  imgDescContainer.classList.add('img-desc-container')
+  imgDescContainer.append(description, imageContainer)
+  homeContent.append(imgDescContainer)
+  imageContainer.append(image)
+  imageContainer.classList.add('img-container')
   const hours = document.createElement('div')
   homeContent.appendChild(hours)
   const hoursTitle = document.createElement('h3')
